@@ -1,0 +1,14 @@
+language: node_js
+node_js: 7
+env:
+ -AUTH= true USER=test PASSWORD=secret
+ -AUTH= false
+notifications:
+  email:
+    recipients:
+      - dennis.wolters@upb.de
+    on_success: always # default: change
+before_script: npm start
+script: npm run lint npm test
+
+ 
